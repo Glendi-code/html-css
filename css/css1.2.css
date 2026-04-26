@@ -1,0 +1,21 @@
+p {
+    color: blue; /*ak je css pre rovnaky prvok, vnima sa posledny, pretoze css sa cita od hora dole */
+}
+
+div p {
+    color: green;
+} /*znacky prvkov sa daju takto stackovat pre presnost*/
+
+#smotana {
+    background-color: blue;
+    color: red;
+} /*da sa stylovat podla id ak chceme specificky prvok, kazde id sa da pouzit iba na jeden prvok*/
+
+.langos {
+    background-color: red;
+    color: brown;
+} /*viem spravit aj triedu/class prvkov ktore budu mat rovnake stylovanie*/
+
+div .cesnak {
+    background-color: aquamarine;
+}
