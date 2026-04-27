@@ -1,0 +1,35 @@
+.header-main {
+    background-color: black;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row; /*do riadku je to default ak dam display:flex*/
+    flex-wrap: wrap; /*ak sa kontent nezmesti do riadku, nemusi sa zmensovat ale prida sa do dalsieho riadku*/
+    justify-content: flex-start; /*umiesntnenie a rozloznie kontentu*/
+    align-content: normal; /*zoradenie rovnako ako pri paragraphe*/
+    gap: 0px 20px; /*medzery medzi kontentom, riadok a stlpec*/
+    align-items: center; /*zarovnanie kontentu v riadku alebo stlpci ktorom je, konkretnejsie ako align-kontent*/
+
+}
+
+.header-main div {
+    height: 40px;
+}
+
+.header-main .div1 {
+    background-color: #4fe89b;
+    order: 0; /*poradie v ktorom sa kontent zobrazi*/
+    flex-basis: 100px; /*skoro rovnake ako width,  ale toto urcuje iba minimalnu sirku podla kontaineru*/
+    flex-grow: 1; /*pomer tychto cisel bude pomer podla ktoreho vyplni kontent priestor boxu*/
+}
+
+.header-main .div2 {
+    background-color: #5faded;
+    flex-shrink: 1; /*prisposobi sa sirke kontentu*/
+    align-self: flex-end; /*override na stylovanie boxu, tento konkretny kontent bude zarovnany inak*/
+}
+
+.header-main .div3 {
+    background-color: #d250e6;
+    flex: 2 0 100px; /*grow, shrink, basis*/
+}
