@@ -1,0 +1,32 @@
+body:after{ /*cele toto preloadne obrazok na stranku aby ju nemuselprehliadac nahrat pri prvom pouziti a neblikal tam obrazok*/
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url(../img/had_hover.jpg);
+}
+
+.image {
+    width: 100px;
+    margin: 100px 0 0 550px;
+}
+
+.divImage {
+    width: 600px;
+    height: 500px;
+    background-image: url(../img/had.jpg); /*../ znamena ze idem o krok dalej v suboroch*/
+    background-size: cover; /*percentualne alebo takto*/
+    background-repeat: no-repeat; /*opakovanie sa obrazku v pozadi boxu*/
+    background-position: center;
+    transition: all ease-in-out 0.5s; /*prechod medzi najblizsim stavom*/
+}
+
+.divImage:hover { /*: vytvori pseudo classu pre urcity pripad/podmienku*/
+    width: 600px;
+    height: 500px;
+    background-image: url(../img/had_hover.jpg); /*../ znamena ze idem o krok dalej v suboroch*/
+    background-size: cover; /*percentualne alebo takto*/
+    background-repeat: no-repeat; /*opakovanie sa obrazku v pozadi boxu*/
+    background-position: center;
+}
