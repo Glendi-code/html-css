@@ -1,0 +1,59 @@
+body {
+    background-color: #323331;
+}
+
+.box {
+    position: relative; /*zobrazi sa inde ale stranka ho stale vnima na povodnej pozicii v html*/
+    left: 700px;
+    top: 50px;
+    z-index: 10; /*prekryvanie, funguje len na prvky co maju nastavenu position*/
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+}
+
+.container {
+    position: relative; /*ak je div v dive, aby nevysiel z jeho viewportu, urcuje sa aj na nom position relative (nic sa nezmeni kym nepridas posun*/
+    background-color: red;
+    width: 500px;
+    height: 200vh; /*percentualne vyjadrenie momentalneho viewportu*/
+    z-index: -10;
+}
+
+.block {
+    position: absolute; /*presunie ho kompletne aj v kode, cize sa uvolni jeho povodne miesto*/
+    right: 0;
+    top: 0;
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    z-index: 10;
+}
+
+.krabica {
+    position: absolute;
+    right: 0;
+    top: 50px; 
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+}
+
+.skatula {
+    position: fixed; /*sposobi ze pri scrollovani ostane prvok na viewporte na rovnakom mieste*/
+    right: 0;
+    top: 100px; 
+    background-color: purple;
+    width: 100px;
+    height: 100px;
+}
+
+.kocka {
+    position: sticky; /*spravi to, ze kontent nezmizne z viewportu ale ostane prilepeny na vrch*/
+    left: 500px;
+    top: 0;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+
+}
