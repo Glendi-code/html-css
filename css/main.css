@@ -51,7 +51,7 @@ a {
 
 .header-main-nav ul li a{
     padding: 0 10px; /*rovnako ako 0 10px 0 10px*/
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Ubuntu", sans-serif;
     line-height: 80px; /*vertikalne oddelenie, nastavi vysku v ktorej sa vycentruje kontent*/
     color: black;
     display: block; /*bude sa spravat ako block a nie text*/
