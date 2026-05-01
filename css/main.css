@@ -1,0 +1,97 @@
+body {
+    background-color: #454544;
+}
+
+body:after {
+    content: url(../img/instagram.png) url(../img/facebook.png);
+    position: absolute;
+    height: 0;
+    width: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+a {
+    cursor: pointer;
+}
+
+.header-main {
+    height: 80px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-main-pfp {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    padding-left: 50px;
+}
+
+.header-main-pfp img {
+    height: 80px;
+}
+
+.header-main-nav {
+    height: 100%;
+    width: fit-content;
+    padding-left: 20px;
+}
+
+.header-main-nav ul{
+    list-style: none; /*zabrani bulletpointom, odrazkam atd*/
+}
+
+.header-main-nav ul li{
+    display: inline;
+    float: left; /*pritlaci k sebe kontent aby som si urcil medzery ja*/
+}
+
+.header-main-nav ul li a{
+    padding: 0 10px; /*rovnako ako 0 10px 0 10px*/
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 80px; /*vertikalne oddelenie, nastavi vysku v ktorej sa vycentruje kontent*/
+    color: black;
+    display: block; /*bude sa spravat ako block a nie text*/
+    height: 100%; /*vyska rovnaka jak vyska hlavicky zaisti ze nemusim kliknut priamo na text aby som otvoril link*/
+}
+
+.header-main-nav ul li a:hover{
+    color: #46a808;
+}
+
+.header-main-sm {
+    height: 100%;
+    width: fit-content;
+    padding: 0 30px;
+    display: flex;
+    align-items: center; /*vertikalny stred*/
+    column-gap: 10px;
+}
+
+.header-main-sm-ig {
+    background-image: url(../img/instagram_black.png);
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header-main-sm-fb:hover{
+    background-image: url(../img/facebook.png);
+}
+
+.header-main-sm-ig:hover{
+    background-image: url(../img/instagram.png);
+}
+
+
+.header-main-sm-fb {
+    background-image: url(../img/facebook_black.png);
+    width: 30px;
+    height: 30px;
+    background-size: cover; /*pokrytie celeho divka*/
+    background-repeat: no-repeat;
+}
