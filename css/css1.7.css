@@ -1,3 +1,8 @@
+:root {
+    --red-color: red; /*root znamena cele html cize cely scope stranky*/
+    /*premenna v css sa zapisuje dvoma pomlckami*/
+}
+
 body {
     background-color: #323331;
 }
@@ -14,7 +19,7 @@ body {
 
 .container {
     position: relative; /*ak je div v dive, aby nevysiel z jeho viewportu, urcuje sa aj na nom position relative (nic sa nezmeni kym nepridas posun*/
-    background-color: red;
+    background-color: var(--red-color);
     width: 500px;
     height: 200vh; /*percentualne vyjadrenie momentalneho viewportu*/
     z-index: -10;
@@ -25,7 +30,7 @@ body {
     right: 0;
     top: 0;
     background-color: green;
-    width: 100px;
+    width: calc(100vw - 200px); /*funkcia calc vie vyratat zmenu velkosti bez rovnakych jednotiek*/
     height: 100px;
     z-index: 10;
 }
