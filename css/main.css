@@ -1,9 +1,13 @@
+:root {
+   --site-color-1: #00260a;
+}
+
 body {
-    background-color: #454544;
+    background-color: var(--site-color-1);
 }
 
 body:after {
-    content: url(../img/instagram.png) url(../img/facebook.png);
+    content: url(../img/instagram.png)  url(../img/facebook.png);
     position: absolute;
     height: 0;
     width: 0;
@@ -11,16 +15,41 @@ body:after {
     overflow: hidden;
 }
 
+h1 {
+    font-size: 26px;
+    line-height: 32px;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 450;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 14px;
+    line-height: 18px;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-weight:200;
+}
+
 a {
     cursor: pointer;
+    font-size: 18px;
+    line-height: 22px;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    text-transform: uppercase;
 }
 
 .header-main {
     height: 80px;
+    top: 0;
     width: 100%;
     background-color: white;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
 }
 
 .header-main-pfp {

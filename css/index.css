@@ -1,0 +1,145 @@
+main {
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: var(--site-color-1); /*ak je v jednom z linknutych css suborov nastavena premenna, da sa pouzit aj v ostatnych suboroch*/
+    margin-top: 80px;
+    background-image: url(../img/hero_page.png), url(../img/pozadie.png); /*prvy je vzdy na vrchu*/
+    background-size: 100vh, cover; /*ak je viac obrazkov nastavenych ako pozadie, da sa pisat dva parametre do jedneho riadku*/
+    background-repeat: no-repeat;
+    background-position: bottom, center;
+    display: flex;
+    justify-content: center; /*horizontalne do stredu*/
+    align-items: center; /*vertikalne do stredu*/
+}
+
+main .main-intro h1{
+    font-size: 65px;
+    line-height: 73px;
+}
+
+main .main-quotes p {
+    background-color: #00260a80;
+    background-blend-mode: difference;
+    width: 200px;
+    font-style: italic;
+    line-height: 20px;
+    padding: 7px;
+    border-left: 4px solid white; /*border: width style color*/
+    border-bottom: 4px solid white; /*border je z vnutra, outline je z vonka*/
+}
+
+main .main-intro a {
+    display: block;
+    background-color: #00260a80;
+    width: fit-content;
+    padding: 7px;
+    outline: 1px solid white;
+}
+
+main .main-intro p {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+main .main-quotes p:nth-child(2) {
+    margin-left: 50px; /*child je hocijaky objekt v kontainery, toto  znamena ze kazde xte (podla zatvorky) sa bude spravat dane*/
+}
+
+main .main-intro {
+    position: relative;
+    right: 100px;
+    bottom: 50px;
+    display: grid;
+    row-gap: 20px;
+}
+
+main .main-quotes {
+    display: grid; /*ma aj stlpce aj riadky*/
+    row-gap: 30px;
+    position: relative;
+    left: 60px;
+    bottom: 30px;
+    width: 15vw;
+}
+
+/*SEKCIA CATEGORY*/
+
+.index-category {
+    width: 100%;
+    padding: 60px 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    column-gap: 35px;
+    flex-wrap: wrap;
+}
+
+.index-category-box {
+    width: 250px;
+    height: 200px;
+    background-color: red;
+    font-size: 32px;
+    font-family: "Ubuntu", sans-serif;
+    color: white;
+    align-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--site-color-1);
+    transition: transform 0.2s ease;
+    z-index: 0;
+    position: relative;
+}
+
+.index-category-box:hover {
+    transform: scale(1.1);
+}
+
+.index-category-box h3 {
+    font-size: 28px;
+    font-family: "Ubuntu", sans-serif;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 0px #00260a80; /*takto sa robi tie textu, xoffset yoffset blur farba*/
+    line-height: 38px;
+    position: relative;
+    z-index: 200;
+}
+
+.index-category-box:nth-child(2) {
+    background-image: url(../img/tricking.jpg);
+    background-position: center;
+}
+
+.index-category-box:nth-child(3) {
+    background-image: url(../img/bicie.jpg);
+}
+
+.index-category-box:nth-child(4) {
+    background-image: url(../img/programovanie.png);
+}
+
+.index-category p {
+    color: #111;
+    text-align: center;
+    font-weight: 400;
+    font-size: 36px;
+    padding-bottom: 40px;
+    flex-basis: 100%; /*flex basis je pociatocna velkost prvku predtym ako flexbox rozdeli miesto*/
+}
+
+.dark-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    opacity: 0.5;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.index-category-box:hover .dark-overlay { /*da sa zmenit aj iny element ako ten na ktorom mam kurzor*/
+    opacity: 0.1;
+}
