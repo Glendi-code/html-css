@@ -1,0 +1,33 @@
+html {
+ font-size: 10px; /*html/root je to na čo poukazuje rem, tu je základné nastavenie*/
+} /*10 px je najjednoduchšie pre násobenie*/
+
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+div {
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 2em; /*2 krát terajšia veľkosť*/
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+ul {
+    font-size: 2em; /*ak je prvok v prvku rovnaký, vie sa to zbytočné násobiť a prekrývať*/
+}
+
+.priklad {
+    font-size: 2rem; /*vždy sa obracia na root, ako je nastavená hodnota od úplného základu*/
+}
