@@ -1,5 +1,7 @@
 :root {
    --site-color-1: #00260a;
+   --site-color-2: #01541a;
+   --site-color-3: #016b21;
 }
 
 body {
@@ -13,6 +15,11 @@ body:after {
     width: 0;
     z-index: -1;
     overflow: hidden;
+}
+
+.wrapper-main{
+    width: 1000px;
+    margin: 0 auto;
 }
 
 h1 {
