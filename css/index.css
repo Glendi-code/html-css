@@ -23,8 +23,8 @@ main .main-intro {
 }
 
 main .main-intro h1{
-    font-size: 65px;
-    line-height: 73px;
+    font-size: 6.5rem;
+    line-height: 1.2;
     text-shadow: 5px 4px 4px #111;
 }
 
@@ -42,8 +42,8 @@ main .main-intro a:hover {
 }
 
 main .main-intro p {
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 1.8rem;
+    line-height: 1.5;
     text-shadow: 2px 2px 2px #111;
 }
 
@@ -61,7 +61,7 @@ main .main-quotes p {
     background-blend-mode: difference;
     width: 200px;
     font-style: italic;
-    line-height: 20px;
+    line-height: 1.75;
     padding: 7px;
     border-left: 4px solid white; /*border: width style color*/
     border-bottom: 4px solid white; /*border je z vnutra, outline je z vonka*/
@@ -87,7 +87,7 @@ main .main-quotes p:nth-child(2) {
     width: 250px;
     height: 200px;
     background-color: red;
-    font-size: 32px;
+    font-size: 3.2rem;
     font-family: "Ubuntu", sans-serif;
     color: white;
     align-content: center;
@@ -104,12 +104,11 @@ main .main-quotes p:nth-child(2) {
 }
 
 .index-category-box h2 {
-    font-size: 28px;
+    font-size: 2.8rem;
     font-family: "Ubuntu", sans-serif;
     color: white;
     text-align: center;
     text-shadow: 2px 2px 0px #00260a80; /*takto sa robi tie textu, xoffset yoffset blur farba*/
-    line-height: 38px;
     position: relative;
     z-index: 200;
 }
@@ -131,7 +130,7 @@ main .main-quotes p:nth-child(2) {
     color: #111;
     text-align: center;
     font-weight: 400;
-    font-size: 36px;
+    font-size: 3.6rem;
     padding-bottom: 40px;
     flex-basis: 100%; /*flex basis je pociatocna velkost prvku predtym ako flexbox rozdeli miesto*/
 }
@@ -157,7 +156,7 @@ main .main-quotes p:nth-child(2) {
 
 .index-about {
     background-color: var(--site-color-1);
-    height: 400px;
+    height: 420px;
     padding: 40px;
 }
 
@@ -188,12 +187,12 @@ main .main-quotes p:nth-child(2) {
     color: white;
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 3rem;
 }
 
 .index-about-text p {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1.6rem;
+    line-height: 1.5;
     font-weight: 100; 
 }
 
