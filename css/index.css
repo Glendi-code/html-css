@@ -103,7 +103,7 @@ main .main-quotes p:nth-child(2) {
     transform: scale(1.1);
 }
 
-.index-category-box h3 {
+.index-category-box h2 {
     font-size: 28px;
     font-family: "Ubuntu", sans-serif;
     color: white;
