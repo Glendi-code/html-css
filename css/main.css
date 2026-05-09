@@ -4,29 +4,22 @@
    --site-color-1: #00260a;
    --site-color-2: #01541a;
    --site-color-3: #016b21;
-   font-size: 62.5%; /*lepšie je to nastaviťpercentuálne pre prípad, že má niekto nastavené väčšie písmo*/
+   font-size: 62.5%; /*lepšie je to nastaviť percentuálne pre prípad, že má niekto nastavené väčšie písmo*/
 }
 
 body {
     background-color: var(--site-color-1);
-}
-
-/*PRELOAD OBRÁZKOV*/
-
-body:after {
-    content: url(../img/instagram.png)  url(../img/facebook.png);
-    position: absolute;
-    height: 0;
-    width: 0;
-    z-index: -1;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /*Wrapper na zarovnanie contentu po celej stránke*/
 
 .wrapper-main{
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
     margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /*ZÁKLADNÉ NASTAVENIA PRVKOV*/
@@ -243,3 +236,55 @@ a {
     color: var(--site-color-3);
 }
 
+/*RESPONSIVITA PRE OSTATNÉ ZARIADENIA*/
+
+@media only screen and (max-width: 600px) {
+
+    .header-main-pfp {
+        padding-left: 20px;
+    }
+
+    .header-main-nav {
+        display: none;
+    }
+
+    .footer-testemoni {
+        display: none;
+    }
+
+    .footer-main-flex {
+        justify-content: flex-start;
+    }
+
+    .footer-site-map {
+        flex-direction: column;
+        row-gap: 20px;
+        padding: 0;
+        justify-content: flex-start;
+    }
+
+    .footer-site-map a {
+        font-size: 1.5rem;
+    }
+
+    .footer-site-map-contact {
+        font-size: 1.5rem;
+    }
+
+    .footer-main-getintouch {
+        display: none;
+    }
+
+    .footer-site-map ul:nth-child(1), .footer-site-map ul:nth-child(2) {
+        flex-basis: auto;
+        width: 100%;
+    }
+
+    .footer-site-map ul:nth-child(3) {
+        flex-basis: 100px;
+    }
+
+    .footer-site-map ul:nth-child(4) li {
+        text-align: left;
+    }
+}

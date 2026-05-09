@@ -6,9 +6,12 @@ main {
     background-color: var(--site-color-1); /*ak je v jednom z linknutych css suborov nastavena premenna, da sa pouzit aj v ostatnych suboroch*/
     margin-top: 80px;
     background-image: url(../img/hero_page.png), url(../img/pozadie.png); /*prvy je vzdy na vrchu*/
-    background-size: 100vh, cover; /*ak je viac obrazkov nastavenych ako pozadie, da sa pisat dva parametre do jedneho riadku*/
+    background-size: contain, cover; /*ak je viac obrazkov nastavenych ako pozadie, da sa pisat dva parametre do jedneho riadku*/
     background-repeat: no-repeat;
     background-position: bottom, center;
+}
+
+.main-flex {
     display: flex;
     justify-content: center; /*horizontalne do stredu*/
     align-items: center; /*vertikalne do stredu*/
@@ -18,6 +21,7 @@ main .main-intro {
     position: relative;
     right: 100px;
     bottom: 50px;
+    top: 80px;
     display: grid;
     row-gap: 20px;
 }
@@ -77,6 +81,9 @@ main .main-quotes p:nth-child(2) {
     width: 100%;
     padding: 60px 0 100px 0;
     background-color: white;
+}
+
+.index-category-flex {
     display: flex;
     justify-content: center;
     column-gap: 35px;
@@ -156,7 +163,7 @@ main .main-quotes p:nth-child(2) {
 
 .index-about {
     background-color: var(--site-color-1);
-    height: 420px;
+    height: fit-content;
     padding: 40px;
 }
 
@@ -239,4 +246,60 @@ main .main-quotes p:nth-child(2) {
 .bc {
     width: 85%;
 }
+
+@media only screen and (max-width: 600px) {
+    main .main-intro {
+        right: 0;
+        top: 20px;
+        left: 20px;
+    }
+
+    main {
+        background-size: 70vw, cover;
+        height: calc(100vh - 160px);
+    };
+
+    .main-flex {
+        flex-direction: column;
+        align-items: normal;
+    }
+
+    main .main-intro h1{
+        font-size: 4rem;
+        padding-bottom: 20px;
+    }
+
+    main .main-quotes {
+        display: none;
+    }
+
+    .index-category-box {
+        margin-bottom: 20px;
+    }
+
+    .index-category {
+        padding: 20px 0 0 0;
+    }
+
+    .index-about-image {
+        display: none;
+    }
+
+    .index-about-skill-bar {
+        width: 100%;
+    }
+
+    .index-about-flex {
+        flex-direction: column;
+
+    }
+
+    .index-about-text {
+        align-items: center;
+        row-gap: 20px;
+        margin-bottom: 20px;
+    }
+
+}
+
 
