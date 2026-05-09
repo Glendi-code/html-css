@@ -1,3 +1,5 @@
+/*SEKCIA MAIN*/
+
 main {
     width: 100%;
     height: calc(100vh - 80px);
@@ -12,10 +14,46 @@ main {
     align-items: center; /*vertikalne do stredu*/
 }
 
+main .main-intro {
+    position: relative;
+    right: 100px;
+    bottom: 50px;
+    display: grid;
+    row-gap: 20px;
+}
+
 main .main-intro h1{
     font-size: 65px;
     line-height: 73px;
     text-shadow: 5px 4px 4px #111;
+}
+
+main .main-intro a {
+    display: block;
+    background-color: var(--site-color-2);
+    width: fit-content;
+    padding: 7px;
+    outline: 1px solid white;
+    transition: background-color 0.15s ease-in-out;
+}
+
+main .main-intro a:hover {
+    background-color: var(--site-color-3);
+}
+
+main .main-intro p {
+    font-size: 18px;
+    line-height: 22px;
+    text-shadow: 2px 2px 2px #111;
+}
+
+main .main-quotes {
+    display: grid; /*ma aj stlpce aj riadky*/
+    row-gap: 30px;
+    position: relative;
+    left: 60px;
+    bottom: 30px;
+    width: 15vw;
 }
 
 main .main-quotes p {
@@ -29,43 +67,8 @@ main .main-quotes p {
     border-bottom: 4px solid white; /*border je z vnutra, outline je z vonka*/
 }
 
-main .main-intro a {
-    display: block;
-    background-color: var(--site-color-2);
-    width: fit-content;
-    padding: 7px;
-    outline: 1px solid white;
-}
-
-main .main-intro a:hover {
-    background-color: var(--site-color-3);
-}
-
-main .main-intro p {
-    font-size: 18px;
-    line-height: 22px;
-    text-shadow: 2px 2px 2px #111;
-}
-
 main .main-quotes p:nth-child(2) {
     margin-left: 50px; /*child je hocijaky objekt v kontainery, toto  znamena ze kazde xte (podla zatvorky) sa bude spravat dane*/
-}
-
-main .main-intro {
-    position: relative;
-    right: 100px;
-    bottom: 50px;
-    display: grid;
-    row-gap: 20px;
-}
-
-main .main-quotes {
-    display: grid; /*ma aj stlpce aj riadky*/
-    row-gap: 30px;
-    position: relative;
-    left: 60px;
-    bottom: 30px;
-    width: 15vw;
 }
 
 /*SEKCIA CATEGORY*/
@@ -199,6 +202,7 @@ main .main-quotes {
     padding: 5px;
     background-color: var(--site-color-2);
     width: fit-content;
+    transition: background-color 0.15s ease-in-out;
 }
 
 .index-about-text a:hover {

@@ -1,3 +1,5 @@
+/*PREMENNÉ FARIEB*/
+
 :root {
    --site-color-1: #00260a;
    --site-color-2: #01541a;
@@ -8,6 +10,8 @@ body {
     background-color: var(--site-color-1);
 }
 
+/*PRELOAD OBRÁZKOV*/
+
 body:after {
     content: url(../img/instagram.png)  url(../img/facebook.png);
     position: absolute;
@@ -17,14 +21,16 @@ body:after {
     overflow: hidden;
 }
 
+/*Wrapper na zarovnanie contentu po celej stránke*/
+
 .wrapper-main{
     width: 1000px;
     margin: 0 auto;
 }
 
+/*ZÁKLADNÉ NASTAVENIA PRVKOV*/
+
 h1 {
-    font-size: 26px;
-    line-height: 32px;
     color: white;
     font-family: "Ubuntu", sans-serif;
     font-weight: 450;
@@ -47,6 +53,8 @@ a {
     font-family: "Ubuntu", sans-serif;
     text-transform: uppercase;
 }
+
+/*SEKCIA HEADER*/
 
 .header-main {
     height: 80px;
@@ -92,10 +100,11 @@ a {
     color: black;
     display: block; /*bude sa spravat ako block a nie text*/
     height: 100%; /*vyska rovnaka jak vyska hlavicky zaisti ze nemusim kliknut priamo na text aby som otvoril link*/
+    transition: color 0.15s ease-in-out; /*transition sa pridava na base, nie na hover*/
 }
 
 .header-main-nav ul li a:hover{
-    color: #46a808;
+    color: var(--site-color-3);
 }
 
 .header-main-sm {
@@ -115,6 +124,14 @@ a {
     background-repeat: no-repeat;
 }
 
+.header-main-sm-fb {
+    background-image: url(../img/facebook_black.png);
+    width: 30px;
+    height: 30px;
+    background-size: cover; /*pokrytie celeho divka*/
+    background-repeat: no-repeat;
+}
+
 .header-main-sm-fb:hover{
     background-image: url(../img/facebook.png);
 }
@@ -123,11 +140,105 @@ a {
     background-image: url(../img/instagram.png);
 }
 
+/*FOOTER*/
 
-.header-main-sm-fb {
-    background-image: url(../img/facebook_black.png);
-    width: 30px;
-    height: 30px;
-    background-size: cover; /*pokrytie celeho divka*/
-    background-repeat: no-repeat;
+.footer-main {
+    width: 100%;
+    padding: 60px 0 50px 0;
+    background-color: #191a19;
 }
+
+.footer-main-flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-testemoni {
+    display: flex;
+    flex-basis: 20%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-testemoni img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    outline: 2px solid white;
+}
+
+.footer-testemoni p {
+    font-style: italic; 
+    text-align: center;
+    padding: 20px 0; 
+}
+
+.footer-main-getintouch { 
+    text-align: center;
+    padding: 5px 5px;
+    border: 1px solid white;
+    background-color: var(--site-color-2);
+    margin-top: 50px;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.footer-main-getintouch:hover {
+    background-color: var(--site-color-3);
+}
+
+.footer-site-map {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.footer-site-map ul:nth-child(1), .footer-site-map ul:nth-child(2) {
+    flex-basis: 200px;
+    padding-left: 5px;
+    border-left: 5px solid var(--site-color-2)
+    /*viem targetovat aj viacero classov naraz, oddeluje sa ciarkou*/
+}
+
+.footer-site-map ul:nth-child(1) li, .footer-site-map ul:nth-child(2) li {
+    transition: transform 0.15s ease-in-out
+}
+
+.footer-site-map ul:nth-child(1) li:hover, .footer-site-map ul:nth-child(2) li:hover {
+    transform: scale(1.1);
+}
+
+.footer-site-map ul:nth-child(3) {
+    flex-basis: 300px;
+}
+
+.footer-site-map ul:nth-child(3) p {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.footer-site-map ul:nth-child(4) {
+    flex-grow: 1; /*dorastie do konca sirky kontajneru*/
+}
+
+.footer-site-map ul:nth-child(4) li {
+    text-align: right;
+    color: white;
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-weight:200;
+}
+
+.footer-site-map-contact {
+    text-transform: none;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.footer-site-map-contact:hover {
+    color: var(--site-color-3);
+}
+
