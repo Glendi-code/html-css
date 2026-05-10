@@ -6,7 +6,7 @@ main {
     background-color: var(--site-color-1); /*ak je v jednom z linknutych css suborov nastavena premenna, da sa pouzit aj v ostatnych suboroch*/
     margin-top: 80px;
     background-image: url(../img/hero_page.png), url(../img/pozadie.png); /*prvy je vzdy na vrchu*/
-    background-size: contain, cover; /*ak je viac obrazkov nastavenych ako pozadie, da sa pisat dva parametre do jedneho riadku*/
+    background-size: 50vh, cover; /*ak je viac obrazkov nastavenych ako pozadie, da sa pisat dva parametre do jedneho riadku*/
     background-repeat: no-repeat;
     background-position: bottom, center;
 }
@@ -56,6 +56,7 @@ main .main-quotes {
     position: relative;
     left: 60px;
     bottom: 30px;
+    top: 40px;
     width: 15vw;
 }
 
