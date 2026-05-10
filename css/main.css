@@ -260,6 +260,10 @@ a {
         display: none;
     }
 
+    .footer-main {
+        padding: 20px 0 20px 0;
+    }
+
     .footer-testemoni {
         display: none;
     }
