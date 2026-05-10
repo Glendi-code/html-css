@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/css2.0.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <!--reset ti pokaz=i styling pre formuláre-->
+    <title>Document</title>
+</head>
+<body>
+    <section class="wrapper-main">
+        <form action="example.html" method="get"> <!--action je miesto kam sa odošlú dáta-->
+            <!--get - uvidíš dáta v url, post - neuvidíš dáta nikde, bezpečnejšie-->
+            <label for="firstname">Krstné meno</label>
+            <!--lepšie označenie ako <p>, for zaisti, že ak klliknem na label, môžem písať do pola-->
+            <input type="text" id="firstname" name="firstname" placeholder="Krstné meno"> 
+            <!--id môže byť vždy len raz použité, placeholder je predpísaný text v poli-->
+            <!--name je zaistí že sa hodnota správne odošle na server, v podstate názov premennej-->
+            <br><br>
+            <label for="message">Cool správa</label>
+            <textarea name="message" id="message" placeholder="Napíš nejakú správu"></textarea>
+            <br><br>
+            <input type="radio" id="eyecolorblue" name="eyecolor" value="blue"> <!--hodnota ktorá odošle-->
+            <label  for="eyecolorblue">Modrá</label>
+            <input type="radio" id="eyecolorbrown" name="eyecolor" value="brown">
+            <label  for="eyecolorbrown">Hnedá</label>
+            <input type="radio" id="eyecolorgreen" name="eyecolor" value="green"> 
+            <label  for="eyecolorgreen">Zelená</label>
+            <!--Ak maju radio inputy rovnaky name, vtedy môže byť zvolený len jeden-->
+            <br><br>
+            <input type="checkbox" id="petcat" name="pet" value="cat"> <!--hodnota ktorá odošle-->
+            <label  for="eyecolorblue">Mačka</label>
+            <input type="checkbox" id="petdog" name="pet" value="dog">
+            <label  for="eyecolorbrown">Pes</label>
+            <input type="checkbox" id="petreptile" name="pet" value="reptile"> 
+            <label  for="eyecolorgreen">Plaz</label>
+            <!--checkboxy môžu byť označené všetky-->
+            <br><br>
+            <label for="cartype">Typ auta</label>
+            <select name="cartype" id="cartype">
+                <option value="none">žiadne</option>
+                <!--prvá možnosť bude placeholder, dáva sa none-->
+                <option value="ford">Ford</option>
+                <option value="toyota">Toyota</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="bmw">BMW</option>
+            </select>
+            <br><br>
+            <label for="password">Heslo</label>
+            <input type="password" id="password" name="password" placeholder="*********">
+            <!--<input type="submit"> dá sa aj takto ale lepší je button-->
+            <br>
+            <button type="submit" value="submit">Poslať</button>
+        </form>
+    </section>
+</body>
+</html>

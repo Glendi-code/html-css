@@ -1,0 +1,46 @@
+.wrapper-main {
+    margin: 0 auto;
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    padding: 20px 0;
+}
+
+#message {
+    width: 100%;
+}
+
+textarea, input, select {
+    border: 1px solid #999;
+    border-radius: 20px;
+    resize: vertical;
+}
+
+textarea:focus, input:focus {
+    outline: 1px solid blue; /*outline preberá styling od borderu napr. radius*/
+}
+
+input[type="radio"] {
+    appearance: radio; /*vzhľad inputu*/
+}
+
+input[type="checkbox"] {
+    appearance: checkbox;
+}
+
+button {
+    background-color: blue;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: aqua;
+}
+
+input[type="text"], textarea, select, button, label, input[type="password"] {
+    padding: 10px;
+}
+/*input[] vie referovať na input s konkrétnym atributom*/
