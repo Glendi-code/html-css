@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/css2.1.css">
+    <title>document</title>
+</head>
+<body>
+    <section class="wrapper-main">
+        <video class="my-video" src="vid/tricking_video.mp4" controls>
+            <!--<source src="vid/tricking_video.mp4" type="video/mp4">
+            cez source vieme natlačiť viac formátov ak by niektoré nefungovali-->
+        </video>
+        <!--controls - tlačítka, autoplay ide iba s muted, loop aby sa hralo dokola-->
+        <br>
+        <div>
+            <button onclick="playPause()">Play/Pause</button>
+            <button onclick="halfNormal()">Half/Normal size</button>
+        </div>
+        </section>
+
+    <script>
+        let myVideo = document.querySelector(".my-video");
+
+        function playPause() {
+            if (myVideo.paused) {
+                myVideo.play();
+            } else {
+                myVideo.pause();
+            }
+        }
+
+        function halfNormal() {
+            if (myVideo.style.transform === "scale(0.5)") {
+                myVideo.style.transform = "scale(1)";
+            } else {
+                myVideo.style.transform = "scale(0.5)";
+            }
+        }
+    </script>
+</body>
+</html>
