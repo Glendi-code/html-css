@@ -19,7 +19,6 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0;
-    box-sizing: border-box;
 }
 
 /*ZÁKLADNÉ NASTAVENIA PRVKOV*/
@@ -240,8 +239,21 @@ a {
 
 @media only screen and (max-width: 600px) {
 
+    .wrapper-main {
+        margin: 0;
+    }
+
+    .header-main {
+        width: 100vw;
+        height: 10vh;
+    }
+
     .header-main-pfp {
         padding-left: 20px;
+    }
+
+    .header-main-sm {
+        padding-right: 20px;
     }
 
     .header-main-nav {
