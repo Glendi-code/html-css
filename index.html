@@ -19,21 +19,25 @@
     <title>Michal Vojáček - Portfólio</title>
 </head>
 <body>
+    <div class="mobile-menu-button">
+        <img src="img/burger_menu.png" alt="burger menu icon">
+    </div>
     <!--HLAVIČKA-->
+    <div class="header-main-logo">
+        <img src="img/logo.jpg" alt="Moje Logo">
+    </div>
     <header class="header-main">
-        <div class="header-main-pfp">
-            <img src="img/logo.jpg" alt="Moje Logo">
-            <nav class="header-main-nav">
-                <ul>
-                    <li><a href="index.html">Domov</a></li>
-                    <li><a href="#">Galéria</a></li>
-                    <li><a href="#">Kontakt</a></li>  
-                </ul>
-            </nav>
-        </div>
+        <nav class="header-main-nav">
+            <ul>
+                <li><a href="index.html">Domov</a></li>
+                <li><a href="#">Galéria</a></li>
+                <li><a href="#">Kontakt</a></li> 
+                <li><a href="#">O mne</a></li>  
+            </ul>
+        </nav>
         <div class="header-main-sm">
-            <a href="https://www.instagram.com/tricking_glend/"><div class="header-main-sm-ig"></div></a>
-            <a href="https://www.facebook.com/michal.vojacek.161/about"><div class="header-main-sm-fb"></div></a>
+            <a href="#"><div id="sm-fb"></div></a>
+            <a href="#"><div id="sm-ig"></div></a>
         </div>
     </header>
     <!--ÚVODNÁ STRÁNKA-->
@@ -134,8 +138,7 @@
             </div>
             <div class="footer-testemoni">
                 <img src="img/michal_palus.jpg" alt="Fotka Michala Paluša">
-                <p>xasfbasbfibasbfabsfbab<br>ifbaisbfinasdbauoboibjka<br>sbn
-                gubsdhb<br> - Michal Paluš</p>
+                <p>obyčajný skurvysyn....<br>chudobný.<br> - Michal Paluš</p>
             </div>
             <a href="#" class="footer-main-getintouch">Kontaktujte ma!</a>
             <div class="footer-site-map">
@@ -167,4 +170,23 @@
         </div>
     </footer>
 </body>
+<script>
+        let headerMain = document.querySelector(".header-main");
+        let headerMobileButton = document.querySelector(".mobile-menu-button img");
+        let headerMoblieButtonBg = document.querySelector(".mobile-menu-button");
+        let isMenuOpen = false;
+
+        headerMobileButton.onclick = function() {
+            if (!isMenuOpen) {
+                headerMain.style.display = "flex";
+                isMenuOpen = true;
+                headerMoblieButtonBg.style.width = "50%";
+            }
+            else if (isMenuOpen){
+                headerMain.style.display = "none";
+                isMenuOpen = false;
+                headerMoblieButtonBg.style.width = "100%";
+            }
+        }
+    </script>
 </html>

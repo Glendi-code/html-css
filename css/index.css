@@ -2,9 +2,8 @@
 
 main {
     width: 100%;
-    height: calc(100vh - 80px);
+    height: 100vh;
     background-color: var(--site-color-1); /*ak je v jednom z linknutych css suborov nastavena premenna, da sa pouzit aj v ostatnych suboroch*/
-    margin-top: 80px;
     background-image: url(../img/hero_page.png), url(../img/pozadie.png); /*prvy je vzdy na vrchu*/
     background-size: 50vh, cover; /*ak je viac obrazkov nastavenych ako pozadie, da sa pisat dva parametre do jedneho riadku*/
     background-repeat: no-repeat;
@@ -21,7 +20,7 @@ main .main-intro {
     position: relative;
     right: 100px;
     bottom: 50px;
-    top: 80px;
+    top: 100px;
     display: grid;
     row-gap: 20px;
 }
@@ -56,7 +55,7 @@ main .main-quotes {
     position: relative;
     left: 60px;
     bottom: 30px;
-    top: 40px;
+    top: 90px;
     width: 15vw;
 }
 
@@ -251,12 +250,13 @@ main .main-quotes p:nth-child(2) {
     main .main-intro {
         right: auto;
         left: auto;
-        top: 20px;
+        top: 100px;
+        row-gap: 0;
     }
 
     main {
         background-size: 80vw, cover;
-        height: 90vh;
+        height: 100vh;
     };
 
     .main-flex {
@@ -273,7 +273,7 @@ main .main-quotes p:nth-child(2) {
     }
 
     .main-intro a {
-        margin-top: 30vh;
+        margin-top: 40vh;
         margin-left: auto;
         margin-right: auto;
     }

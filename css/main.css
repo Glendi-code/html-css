@@ -4,6 +4,7 @@
    --site-color-1: #00260a;
    --site-color-2: #01541a;
    --site-color-3: #016b21;
+   --menu-count: 4;
    font-size: 62.5%; /*lepšie je to nastaviť percentuálne pre prípad, že má niekto nastavené väčšie písmo*/
 }
 
@@ -49,87 +50,104 @@ a {
 
 /*SEKCIA HEADER*/
 
+.mobile-menu-button {
+        display: none;
+        padding-right: 10px;
+    }
+
 .header-main {
-    height: 80px;
-    top: 0;
     width: 100%;
-    background-color: white;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     position: fixed;
-    z-index: 1000;
-}
-
-.header-main-pfp {
-    height: 100%;
-    width: fit-content;
-    display: flex;
-    padding-left: 50px;
-}
-
-.header-main-pfp img {
-    height: 80px;
+    top: 0;
+    background-color: #fff;
+    padding: 0 30px 0 80px;
+    z-index: 100;
 }
 
 .header-main-nav {
-    height: 100%;
+    display: flex;
+    padding: 0 10px;
+}
+
+.header-main-logo {
+    display: flex;
     width: fit-content;
-    padding-left: 20px;
+    height: 60px;
+    align-items: center;
+    align-self: center;
+    position: fixed;
+    z-index: 200;
+    top: 10px;
+    left: 10px;
 }
 
-.header-main-nav ul{
-    list-style: none; /*zabrani bulletpointom, odrazkam atd*/
+.header-main-logo img{
+    height: 100%;
 }
 
-.header-main-nav ul li{
-    display: inline;
-    float: left; /*pritlaci k sebe kontent aby som si urcil medzery ja*/
+.header-main ul {
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+    list-style: none;
+    align-self: center;
+    margin-right: 80px;
 }
 
-.header-main-nav ul li a{
-    padding: 0 10px; /*rovnako ako 0 10px 0 10px*/
-    font-family: "Ubuntu", sans-serif;
-    line-height: 80px; /*vertikalne oddelenie, nastavi vysku v ktorej sa vycentruje kontent*/
-    color: black;
-    display: block; /*bude sa spravat ako block a nie text*/
-    height: 100%; /*vyska rovnaka jak vyska hlavicky zaisti ze nemusim kliknut priamo na text aby som otvoril link*/
-    transition: color 0.15s ease-in-out; /*transition sa pridava na base, nie na hover*/
+.header-main ul li a {
+    display: block;
+    height: 100%;
+    line-height: 80px;
+    padding: 0 10px;
+    color: #000;
+    background-color: #fff;
+    transition: color ease-in-out 150ms;
 }
 
-.header-main-nav ul li a:hover{
+.header-main ul li a:hover {
     color: var(--site-color-3);
+    background-color: #626362;
 }
 
 .header-main-sm {
-    height: 100%;
-    width: fit-content;
-    padding: 0 30px;
     display: flex;
-    align-items: center; /*vertikalny stred*/
-    column-gap: 10px;
+    align-self: center;
+    height: 80px;
+    margin-left: auto;
+    column-gap: 20px;
+    align-items: center;
 }
 
-.header-main-sm-ig {
-    background-image: url(../img/instagram_black.png);
-    width: 30px;
-    height: 30px;
+.header-main-sm a {
+    height: 100%;
+    display: block;
+    align-content: center;
+    cursor: pointer;
+}
+
+.header-main-sm div {
     background-size: cover;
     background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
 }
 
-.header-main-sm-fb {
+#sm-fb {
     background-image: url(../img/facebook_black.png);
-    width: 30px;
-    height: 30px;
-    background-size: cover; /*pokrytie celeho divka*/
-    background-repeat: no-repeat;
 }
 
-.header-main-sm-fb:hover{
+#sm-ig {
+    background-image: url(../img/instagram_black.png);
+}
+
+#sm-fb:hover {
     background-image: url(../img/facebook.png);
 }
 
-.header-main-sm-ig:hover{
+#sm-ig:hover {
     background-image: url(../img/instagram.png);
 }
 
@@ -137,7 +155,7 @@ a {
 
 .footer-main {
     width: 100%;
-    padding: 60px 0 50px 0;
+    padding-top: 60px;
     background-color: #191a19;
 }
 
@@ -244,20 +262,65 @@ a {
     }
 
     .header-main {
-        width: 100vw;
-        height: 10vh;
+        display: none;
+        height: 100vh;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: 0;
     }
 
-    .header-main-pfp {
-        padding-left: 20px;
-    }
-
-    .header-main-sm {
-        padding-right: 20px;
+    .header-main-logo {
+        height: 80px;
+        position: absolute;
+        padding: 10px;
+        top: 0;
+        left: 0;
+        z-index: 300;
     }
 
     .header-main-nav {
-        display: none;
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    .header-main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .header-main-nav ul li a {
+        font-size: 2.5rem;
+    }
+
+    .mobile-menu-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        height: 80px;
+        z-index: 200;
+        background-color: #fff;
+    }
+
+    .header-main-sm {
+        flex-direction: column;
+        height: 150px;
+        margin: 10px 0 0 0;
+        row-gap: 30px;
+    }
+
+    .header-main-sm div {
+        height: 60px;
+        width: 60px;
+    }
+
+    .mobile-menu-button img {
+        height: 60px;
+        align-self: center;
     }
 
     .footer-main {
